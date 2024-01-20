@@ -17,4 +17,10 @@ M.lspconfig = {
   }
 }
 
+M.telescope = {
+  n = {
+    ["<leader>fc"] = { "<cmd>Telescope grep_string<cr>", "Find string under cursor"},
+  }
+}
+
 return M
