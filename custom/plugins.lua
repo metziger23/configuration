@@ -1,7 +1,11 @@
 local plugins = {
   {
     "inkarkat/vim-ReplaceWithRegister", -- replace with register contents using motion (gr + motion)
-    lazy = false,
+    keys = {
+      { "gr",  mode = "n", desc = "Replace with register" },
+      { "grr", mode = "n", desc = "Replace with register current line" },
+      { "gr",  mode = "x", desc = "Replace with register linewise (visual)" },
+    },
   },
   {
     "kylechui/nvim-surround",
