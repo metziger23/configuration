@@ -1,4 +1,14 @@
+local overrides = require("custom.configs.overrides")
+
 local plugins = {
+  -- override plugin configs
+  {
+    "nvim-tree/nvim-tree.lua",
+    opts = overrides.nvimtree,
+  },
+
+
+  -- Install a plugin
   {
     "inkarkat/vim-ReplaceWithRegister", -- replace with register contents using motion (gr + motion)
     keys = {
