@@ -1,5 +1,22 @@
 local M = {}
 
+M.general = {
+  n = {
+    ["<A-j>"] = { "<cmd>m .+1<cr>==", "Move down" },
+    ["<A-k>"] = { "<cmd>m .-2<cr>==", "Move up" },
+  },
+
+  i = {
+    ["<A-j>"] = { "<esc><cmd>m .+1<cr>==gi", "Move down" },
+    ["<A-k>"] = { "<esc><cmd>m .-2<cr>==gi", "Move up" },
+  },
+
+  v = {
+    ["<A-j>"] = { ":m '>+1<cr>gv=gv", "Move down" },
+    ["<A-k>"] = { ":m '<-2<cr>gv=gv", "Move up" },
+  },
+}
+
 M.disabled = {
   n = {
     ["gr"] = ""
